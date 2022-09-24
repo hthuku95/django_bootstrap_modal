@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+	<head>
+        <title>{% block title %}{% endblock title %}</title>
+        {% block meta %}
+
+        {% endblock meta %}
+
+        {% block extra_head %}
+        {% endblock extra_head %}
+      
+        <link rel="stylesheet" href="{%static 'css/bootstrap.min.css' %}">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+	</head>
+	<body class="is-preload">
+        {% block content %}
+        {% endblock %}
+        <!-- Footer -->
+        <footer id="footer" class="wrapper style1-alt">
+            <div class="inner">
+                <ul class="menu">
+                    <li> Swapbox &copy; 2023. All rights reserved </li>
+                </ul>
+            </div>
+        </footer>
+        <!-- Scripts -->
+        <script src=" {% static 'js/bootstrap.min.js' %}"></script>
+	</body>
+</html>

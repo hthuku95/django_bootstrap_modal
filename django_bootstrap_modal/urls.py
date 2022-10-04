@@ -8,8 +8,10 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path(r'',views.frontend, name="frontend"),
-    path(r'',views.backend,name="backend"),
+    path(r'backend/',views.backend,name="backend"),
     path(r'login/',views.login,name="login"),
+    path(r'login_user/',views.LoginUser,name="login_user"),
+    path(r'logout_user/',views.LogoutUser,name="loguot_user"),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
